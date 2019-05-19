@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         VideoDownloadLink
 // @namespace    https://github.com/taktheh/VideoDownloadLink
-// @version      0.0.5
+// @version      0.0.6
 // @description  Relocate to the download page of the embeded video.
 // @author       Takamaro the Hentai
+// @downloadURL  https://github.com/taktheh/VideoDownloadLink/raw/master/VideoDownloadLink.user.js
 // @include      https://openload.co/embed/*
 // @include      https://vidoza.net/embed-*
 // @include      https://www.rapidvideo.com/e*
