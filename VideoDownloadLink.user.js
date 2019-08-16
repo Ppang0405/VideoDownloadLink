@@ -9,7 +9,9 @@
 // @include      https://vidoza.net/embed-*
 // @include      https://www.rapidvideo.com/e*
 // @include      https://streamcherry.com/embed/*
+// @include      https://verystream.com/e/*
 // @include      https://asianclub.tv/v/*
+// @include      https://mm9841.com/v/*
 // @include      https://*embed.*/v/*
 // @grant        none
 // ==/UserScript==
@@ -20,6 +22,7 @@
     const ReplaceList = [
         [ 'vidoza.net/embed-', 'vidoza.net/' ],
         [ 'rapidvideo.com/e[^/]*/', 'rapidvideo.com/?v=' ],
+        [ 'verystream.com/e/', 'verystream.com/stream/' ],
         [ '/v/', '/f/' ],
         [ '/embed/', '/f/' ],
     ];
