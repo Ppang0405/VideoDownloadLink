@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VideoDownloadLink
 // @namespace    https://github.com/taktheh/VideoDownloadLink
-// @version      0.0.7
+// @version      0.0.9
 // @description  Relocate to the download page of the embeded video.
 // @author       Takamaro the Hentai
 // @downloadURL  https://github.com/taktheh/VideoDownloadLink/raw/master/VideoDownloadLink.user.js
@@ -21,7 +21,7 @@
     'use strict';
 
     const ReplaceList = [
-        [ 'https://oload.life/embed/', 'https://openload.co/f/' ],
+        [ 'oload.life/embed/', 'openload.co/f/' ],
         [ 'vidoza.net/embed-', 'vidoza.net/' ],
         [ 'rapidvideo.com/e[^/]*/', 'rapidvideo.com/?v=' ],
         [ 'verystream.com/e/', 'verystream.com/stream/' ],
@@ -50,12 +50,12 @@
         div.appendChild(a);
         div.appendChild(button);
         document.body.appendChild(div);
+
+        return true;
     }
 
-    ReplaceList.forEach(i => {
-        var r = new RegExp(i[0]);
-        if(r.test(l)) {
-            return dlink(l.replace(r, i[1]));
-        }
+    ReplaceList.find(e => {
+        var r = new RegExp(e[0]);
+        return r.test(l) && dlink(l.replace(r, e[1]));
     });
 })(location.href);
