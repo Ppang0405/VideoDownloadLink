@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         VideoDownloadLink
 // @namespace    https://github.com/taktheh/VideoDownloadLink
-// @version      0.0.6
+// @version      0.0.7
 // @description  Relocate to the download page of the embeded video.
 // @author       Takamaro the Hentai
 // @downloadURL  https://github.com/taktheh/VideoDownloadLink/raw/master/VideoDownloadLink.user.js
 // @include      https://openload.co/embed/*
+// @include      https://oload.life/embed/*
 // @include      https://vidoza.net/embed-*
 // @include      https://www.rapidvideo.com/e*
 // @include      https://streamcherry.com/embed/*
@@ -20,6 +21,7 @@
     'use strict';
 
     const ReplaceList = [
+        [ 'https://oload.life/embed/', 'https://openload.co/f/' ],
         [ 'vidoza.net/embed-', 'vidoza.net/' ],
         [ 'rapidvideo.com/e[^/]*/', 'rapidvideo.com/?v=' ],
         [ 'verystream.com/e/', 'verystream.com/stream/' ],
