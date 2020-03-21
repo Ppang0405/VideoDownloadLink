@@ -6,6 +6,7 @@
 // @author       Takamaro the Hentai
 // @downloadURL  https://github.com/taktheh/VideoDownloadLink/raw/master/VideoDownloadLink.user.js
 // @include      https://vidoza.net/embed-*
+// @include      https://mixdrop.*/e/
 // @include      https://feurl.com/v/*
 // @include      https://asianclub.tv/v/*
 // @include      https://mm9841.com/v/*
@@ -17,7 +18,8 @@
     'use strict';
 
     const ReplaceList = [
-        [ 'vidoza.net/embed-', 'vidoza.net/' ],
+        [ 'vidoza\.net/embed-', 'vidoza\.net/' ],
+        [ 'mixdrop\..*/e/', 'mixdrop.co/f/' ],
         [ '/v/', '/f/' ],
         [ '/embed/', '/f/' ],
     ];
